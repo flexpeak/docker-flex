@@ -27,7 +27,7 @@ git clone https://github.com/flexpeak/docker-flex.git
 ````sh
 cd docker-flex
 ````
-3. Edite o arquivo .env de acordo com as preferências
+1. Copie o arquivo ``.env-example`` para um novo arquivo chamado ``.env`` e, se necessário, edite de acordo com as suas preferências
 ````sh
 cp .env.example .env
 ````
