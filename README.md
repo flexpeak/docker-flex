@@ -29,7 +29,7 @@ cd docker-flex
 ````
 3. Edite o arquivo .env de acordo com as preferências
 ````sh
-cp .env-example .env
+cp .env.example .env
 ````
 4. Faça o up (o comando up também fará o build na primeira vez - este comando poderá demorar horas, dependendo da configuração da máquia)
 ````sh
