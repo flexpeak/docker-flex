@@ -1,0 +1,5 @@
+.env
+.idea
+nginx/sites/*
+postgres/docker-entrypoint-initdb.d/
+mysql/docker-entrypoint-initdb.d/
