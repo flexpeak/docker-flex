@@ -94,5 +94,17 @@ Adicione as seguintes linhas no final do arquivo /etc/hosts
 127.0.0.1   projeto-teste.test
 ````
 
+### No Windows
+Para editar o arquivo hosts no Windows você irá precisar abrir o arquivo usando algum editor de texto como administrador. Como o notepad++ ou o próprio vscode. 
+
+O arquivo hosts no Windows fica no seguinte caminho: C:\Windows\System32\drivers\etc\hosts
+
+Cuidado ao editar usando o Bloco de Notas (notepad), pois este arquivo não possui extensão e poderá ocasionar problemas ao salvar.
+
+Adicione as seguintes linhas no final do arquivo /etc/hosts
+````sh
+127.0.0.1   projeto-teste.test
+````
+
 ### Verificando configurações
 Ao abrir no navegador o endereço http://projeto-teste.test você deverá ver o projeto Laravel instalado corretamente.
