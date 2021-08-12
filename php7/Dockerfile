@@ -3,10 +3,6 @@ FROM php:7.4-fpm
 ARG USER_UID
 ARG USER_GID
 
-RUN groupadd -g ${USER_GID} flexdock && \
-useradd -u ${USER_UID} -g flexdock -m flexdock && \
-usermod -p "*" flexdock
-
 RUN ldconfig
 
 RUN apt update && apt install -y openssl bash libxml2-dev postgresql-client libpq-dev libpng-dev libaio1 chromium
@@ -47,5 +43,8 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /var/www
 
+RUN groupadd -g ${USER_GID} flexdock && \
+useradd -u ${USER_UID} -g flexdock -m flexdock && \
+usermod -p "*" flexdock
 
 COPY ./.bash_aliases /home/flexdock
