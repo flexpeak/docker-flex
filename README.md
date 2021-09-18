@@ -31,7 +31,7 @@ cd docker-flex
 ````sh
 cp .env.example .env
 ````
-4. Faça o up (o comando up também fará o build na primeira vez - este comando poderá demorar horas, dependendo da configuração da máquia)
+4. Faça o up (o comando up também fará o build na primeira vez - este comando poderá demorar horas, dependendo da configuração da máquina)
 ````sh
 sudo docker-compose up -d
 # ATENÇÃO: para Windows não precisa de sudo
@@ -55,7 +55,7 @@ sudo docker-compose exec php7 bash
 ````sh
 docker-compose exec --user=flexdock php7 bash
 ````
-**Dependendo do seu terminal,** você poderá precisar fazer uso do winpty no **Windows**
+**Dependendo do seu terminal,** você poderá precisar fazer uso do winpty (quando usar o Git Bash) no **Windows**
 ````sh
 winpty docker-compose exec --user=flexdock php7 bash
 ````
