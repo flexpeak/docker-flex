@@ -59,6 +59,26 @@ services:
     networks:
       - flex-network
 
+  php8:
+    build:
+      context: ./php8
+      args:
+        - USER_UID=${USER_UID}
+        - USER_GID=${USER_GID}
+    container_name: flex-php8
+    restart: always
+    volumes:
+      - ../:/var/www/
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+      - ./docker-php-memlimit.ini:/usr/local/etc/php/conf.d/docker-php-memlimit.ini
+      - ./openssl.cnf:/etc/ssl/openssl.cnf
+    networks:
+      - flex-network
+    tty: true
+    depends_on:
+      - mysql
+
 networks: 
   flex-network:
     driver: bridge
