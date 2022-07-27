@@ -13,7 +13,7 @@ RUN apt update && apt install -y openssl bash libxml2-dev postgresql-client libp
 
 RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql soap gd
 
-RUN docker-php-ext-install zip
+# RUN docker-php-ext-install zip
 
 RUN docker-php-ext-install exif
 
