@@ -1,12 +1,5 @@
 FROM alpine:latest
 
-ARG USER_UID
-ARG USER_GID
-
-RUN groupadd -g ${USER_GID} flexdock && \
-useradd -u ${USER_UID} -g flexdock -m flexdock && \
-usermod -p "*" flexdock
-
 RUN ldconfig
 
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
