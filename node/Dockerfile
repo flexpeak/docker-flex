@@ -9,7 +9,7 @@ RUN rm -rf /var/www/html
 WORKDIR /var/www
 
 RUN npm install pm2 -g
-RUN pwd && sleep 2
+
 COPY ./ecosystem.config.js /var/www/ecosystem.config.js
 
 CMD ["pm2-runtime", "/var/www/ecosystem.config.js"]
