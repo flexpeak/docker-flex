@@ -1,0 +1,28 @@
+# EXEMPLO COM REVERSE_PROXY COM NODE
+# https://HOST {
+#    reverse_proxy node:PORTA
+#}
+
+# EXEMPLO COM APLICAÇÃO LARAVEL
+#https://HOST {
+#    root * /var/www/NOME_DA_PASTA/public
+#    log {
+#        output file /var/log/caddy/tas.access.log {
+#            roll_size 100mb
+#            roll_keep 30
+#            roll_keep_for 720h
+#        }
+#    }
+#    file_server
+#    php_fastcgi php8:9000 {
+#        index index.php
+#        dial_timeout 6000s
+#        read_timeout  6000s
+#        write_timeout 6000s
+#    }
+#    request_body {
+#        max_size 2g
+#    }
+#    encode gzip
+#    tls no-reply@HOST
+#}
