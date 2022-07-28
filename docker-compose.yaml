@@ -92,6 +92,7 @@ services:
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
       - ./openssl.cnf:/etc/ssl/openssl.cnf
+      - "./node/ecosystem.config.js:/tmp/ecosystem.config.js"
     networks:
       - flex-network
     tty: true
