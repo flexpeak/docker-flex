@@ -1,5 +1,5 @@
 # EXEMPLO COM REVERSE_PROXY COM NODE
-# https://HOST {
+#https://HOST {
 #    reverse_proxy node:PORTA
 #}
 
