@@ -1,15 +1,18 @@
 module.exports = [{
-  script: '/var/www/app/index.js',
-  name: 'app'
+  script: 'index.js',
+  name: 'app',
+  cwd: '/var/www/app/'
 }]
 
-/* 
+/*
 EXEMPLO COM MULTIPLOS SERVIDORES
 module.exports = [{
-  script: '/var/www/app/index.js',
-  name: 'app'
+  script: 'index.js',
+  name: 'app',
+  cwd: '/var/www/app/'
 }, {
-  script: '/var/www/app2/index.js',
-  name: 'app2'
+  script: 'index.js',
+  name: 'app2',
+  cwd: '/var/www/app2/'
 }]
 */
