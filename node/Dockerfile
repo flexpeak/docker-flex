@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM debian:stable-slim
 
 RUN apt update && apt install -y apt-fast && apt install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
