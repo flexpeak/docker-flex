@@ -16,6 +16,8 @@ RUN rm -rf /var/www/html
 
 WORKDIR /var/www
 
+RUN npm install pm2 -g
+
 COPY ./ecosystem.config.js /home/flexdock
 
 CMD ["pm2-runtime", "/home/flexdock/ecosystem.config.js"]
