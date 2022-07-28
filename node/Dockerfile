@@ -12,4 +12,4 @@ RUN npm install pm2 -g
 
 COPY ./ecosystem.config.js /var/www/ecosystem.config.js
 
-CMD ["pm2-runtime", "/var/www/ecosystem.config.js"]
+CMD ["pm2", "start", "/var/www/ecosystem.config.js"]
