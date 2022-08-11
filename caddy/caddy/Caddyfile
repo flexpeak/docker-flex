@@ -6,13 +6,6 @@
 # EXEMPLO COM APLICAÇÃO LARAVEL
 #https://HOST {
 #    root * /var/www/NOME_DA_PASTA/public
-#    log {
-#        output file /var/log/caddy/tas.access.log {
-#            roll_size 100mb
-#            roll_keep 30
-#            roll_keep_for 720h
-#        }
-#    }
 #    file_server
 #    php_fastcgi php8:9000 {
 #        index index.php
