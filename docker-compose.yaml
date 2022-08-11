@@ -121,8 +121,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    depends_on:
-      - php8
     networks:
       - flex-network
     restart: always
