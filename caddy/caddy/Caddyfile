@@ -21,8 +21,8 @@
 #}
 
 # EXEMPLO COM APLICAÇÃO REACT
-https://HOST {
-    root * /var/www/NOME_DA_PASTA/build
-    try_files {path} /index.html
-    file_server
-}
+#https://HOST {
+#    root * /var/www/NOME_DA_PASTA/build
+#    try_files {path} /index.html
+#    file_server
+#}
