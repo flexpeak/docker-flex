@@ -92,7 +92,26 @@ services:
     networks:
       - flex-network
     tty: true
-  
+    depends_on:
+      - workspace
+
+  workspace:
+    build:
+      context: ./workspace
+      args:
+        - USER_UID=${USER_UID}
+        - USER_GID=${USER_GID}
+    container_name: flex-workspace
+    restart: always
+    volumes:
+      - ../:/var/www/
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+      - ./openssl.cnf:/etc/ssl/openssl.cnf
+    networks:
+      - flex-network
+    tty: true
+
   caddy:
     build: ./caddy
     volumes:
