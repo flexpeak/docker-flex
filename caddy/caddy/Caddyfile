@@ -13,9 +13,6 @@
 #        read_timeout  6000s
 #        write_timeout 6000s
 #    }
-#    request_body {
-#        max_size 2g
-#    }
 #    encode gzip
 #    tls no-reply@HOST
 #}
