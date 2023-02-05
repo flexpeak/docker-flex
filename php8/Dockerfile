@@ -36,7 +36,7 @@ RUN docker-php-ext-install intl
 
 RUN docker-php-ext-configure calendar && docker-php-ext-install calendar
 
-RUN docker-php-ext-configure gd --with-png=/usr/include/ --with-jpeg=/usr/include/ --with-freetype=/usr/include/ \
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd
 
 WORKDIR /var/www
