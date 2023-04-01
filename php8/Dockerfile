@@ -39,6 +39,8 @@ RUN docker-php-ext-configure calendar && docker-php-ext-install calendar
 RUN docker-php-ext-configure gd --with-jpeg \
     && docker-php-ext-install gd
 
+RUN apt install -y zip
+
 WORKDIR /var/www
 
 
