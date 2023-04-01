@@ -47,4 +47,6 @@ RUN groupadd -g ${USER_GID} flexdock && \
 useradd -u ${USER_UID} -g flexdock -m flexdock && \
 usermod -p "*" flexdock
 
+RUN apt install -y zip
+
 COPY ./.bash_aliases /home/flexdock
