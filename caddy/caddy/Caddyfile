@@ -17,6 +17,11 @@
 #    tls no-reply@HOST
 #}
 
+# EXEMPLO REDIRECIONAR HTTP PARA HTTPS
+#http://HOST {
+#    redir https://HOST{uri}
+#}
+
 # EXEMPLO COM APLICAÇÃO REACT
 #https://HOST {
 #    root * /var/www/NOME_DA_PASTA/build
