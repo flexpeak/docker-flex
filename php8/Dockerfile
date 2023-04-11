@@ -41,8 +41,9 @@ RUN docker-php-ext-configure gd --with-jpeg \
 
 RUN apt install -y zip
 
-RUN apk add --no-cache zip libzip-dev
-RUN docker-php-ext-configure zip
+RUN apt-get update && apt-get install -y \
+    zlib1g-dev \
+    libzip-dev
 RUN docker-php-ext-install zip
 
 WORKDIR /var/www
